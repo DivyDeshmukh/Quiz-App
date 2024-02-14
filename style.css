@@ -1049,7 +1049,7 @@ video {
   }
 }
 
-@media (min-height: 600px) and (max-height: 800px) {
+/* @media (min-height: 600px) and (max-height: 800px) {
 
   main {
     padding: 10px 0;
@@ -1068,4 +1068,4 @@ video {
     padding: 15px 10px;
   }
 
-}
+} */
