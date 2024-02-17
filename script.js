@@ -451,7 +451,7 @@ function results () {
         videoContainer.style = "height: 250px; width: 280px;"
         videoContainer.id = 'gif';
         videoContainer.innerHTML = `<div style="height: 100%; width: 100%; border: 1px solid #fff">
-            <video src="../media/kbc.mp4" autoplay loop muted style='height: 250px; width: 280px; object-fit: cover'></video>
+            <video src="./kbc.mp4" autoplay loop muted style='height: 250px; width: 280px; object-fit: cover'></video>
         </div>`;
         document.querySelector('#top').insertAdjacentElement('afterend', videoContainer);
     }else if (score === 0) {
