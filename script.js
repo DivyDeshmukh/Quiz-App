@@ -1,29 +1,274 @@
-const data = [
-    {
-        num: 1,
-        ques: "Which is largest animal in the world?",
-        options: ["Shark", "Blue Whale", "Elephant", "Giraffe"],
-        key: "Blue Whale"
-    },
-    {
-        num: 2,
-        ques: "Which is smallest country in the world?",
-        options: ["Vatican City", "Bhutan", "Nepal", "Srilanka"],
-        key: "Vatican City"
-    },
-    {
-        num: 3,
-        ques: "Which is largest desert in the world?",
-        options: ["Kalahari", "Gobi", "Sahara", "Antartica"],
-        key: "Antartica"
-    },
-    {
-        num: 4,
-        ques: "Which is smallest continent in the world?",
-        options: ["Asia", "Australia", "Arctic", "Africa"],
-        key: "Australia"
-    },
-];
+const data = {
+    quiz1: [
+        {
+            num: 1,
+            ques: "Which is the largest animal in the world?",
+            options: ["Shark", "Blue Whale", "Elephant", "Giraffe"],
+            key: "Blue Whale"
+        },
+        {
+            num: 2,
+            ques: "Which is the smallest country in the world?",
+            options: ["Vatican City", "Bhutan", "Nepal", "Sri Lanka"],
+            key: "Vatican City"
+        },
+        {
+            num: 3,
+            ques: "Which is the largest desert in the world?",
+            options: ["Kalahari", "Gobi", "Sahara", "Antarctica"],
+            key: "Antarctica"
+        },
+        {
+            num: 4,
+            ques: "Which is the smallest continent in the world?",
+            options: ["Asia", "Australia", "Arctic", "Africa"],
+            key: "Australia"
+        },
+    ],
+
+    quiz2: [
+        {
+            num: 1,
+            ques: "What is the capital of Canada?",
+            options: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+            key: "Ottawa"
+        },
+        {
+            num: 2,
+            ques: "Which planet is known as the 'Red Planet'?",
+            options: ["Mars", "Venus", "Jupiter", "Saturn"],
+            key: "Mars"
+        },
+        {
+            num: 3,
+            ques: "Who wrote 'To Kill a Mockingbird'?",
+            options: ["J.K. Rowling", "Harper Lee", "George Orwell", "Jane Austen"],
+            key: "Harper Lee"
+        },
+        {
+            num: 4,
+            ques: "What is the largest lake in the world?",
+            options: ["Caspian Sea", "Lake Superior", "Lake Baikal", "Great Bear Lake"],
+            key: "Caspian Sea"
+        },
+    ],
+
+    quiz3: [
+        {
+            num: 1,
+            ques: "Which element has the chemical symbol 'H'?",
+            options: ["Hydrogen", "Helium", "Carbon", "Oxygen"],
+            key: "Hydrogen"
+        },
+        {
+            num: 2,
+            ques: "Who painted the Mona Lisa?",
+            options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+            key: "Leonardo da Vinci"
+        },
+        {
+            num: 3,
+            ques: "What is the currency of Japan?",
+            options: ["Yen", "Won", "Ringgit", "Dollar"],
+            key: "Yen"
+        },
+        {
+            num: 4,
+            ques: "In what year did the first manned moon landing occur?",
+            options: ["1965", "1972", "1969", "1981"],
+            key: "1969"
+        },
+    ],
+
+    quiz4: [
+        {
+            num: 1,
+            ques: "Which is the longest river in the world?",
+            options: ["Amazon", "Nile", "Yangtze", "Mississippi"],
+            key: "Nile"
+        },
+        {
+            num: 2,
+            ques: "What is the largest island in the world?",
+            options: ["Greenland", "Australia", "Borneo", "Madagascar"],
+            key: "Greenland"
+        },
+        {
+            num: 3,
+            ques: "Who wrote 'The Great Gatsby'?",
+            options: ["Ernest Hemingway", "F. Scott Fitzgerald", "Jane Austen", "George Orwell"],
+            key: "F. Scott Fitzgerald"
+        },
+        {
+            num: 4,
+            ques: "Which country is known as the 'Land of the Rising Sun'?",
+            options: ["China", "Japan", "South Korea", "Vietnam"],
+            key: "Japan"
+        },
+    ],
+
+    quiz5: [
+        {
+            num: 1,
+            ques: "What is the capital of Brazil?",
+            options: ["Buenos Aires", "Brasília", "Rio de Janeiro", "São Paulo"],
+            key: "Brasília"
+        },
+        {
+            num: 2,
+            ques: "Which is the largest ocean?",
+            options: ["Atlantic", "Pacific", "Indian", "Southern"],
+            key: "Pacific"
+        },
+        {
+            num: 3,
+            ques: "Who developed the theory of relativity?",
+            options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Stephen Hawking"],
+            key: "Albert Einstein"
+        },
+        {
+            num: 4,
+            ques: "What is the official language of China?",
+            options: ["Mandarin", "Cantonese", "Shanghainese", "Hokkien"],
+            key: "Mandarin"
+        },
+    ],
+
+    quiz6: [
+        {
+            num: 1,
+            ques: "Which is the largest mountain range in the world?",
+            options: ["Himalayas", "Andes", "Alps", "Rocky Mountains"],
+            key: "Himalayas"
+        },
+        {
+            num: 2,
+            ques: "Who is known as the 'Father of Computers'?",
+            options: ["Bill Gates", "Charles Babbage", "Steve Jobs", "Alan Turing"],
+            key: "Charles Babbage"
+        },
+        {
+            num: 3,
+            ques: "Which gas makes up the majority of Earth's atmosphere?",
+            options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+            key: "Nitrogen"
+        },
+        {
+            num: 4,
+            ques: "In what year did World War I begin?",
+            options: ["1914", "1918", "1939", "1945"],
+            key: "1914"
+        },
+    ],
+
+    quiz7: [
+        {
+            num: 1,
+            ques: "What is the largest mammal in the world?",
+            options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+            key: "Blue Whale"
+        },
+        {
+            num: 2,
+            ques: "Who wrote 'Pride and Prejudice'?",
+            options: ["Jane Austen", "Emily Brontë", "Charlotte Brontë", "Charles Dickens"],
+            key: "Jane Austen"
+        },
+        {
+            num: 3,
+            ques: "Which is the largest moon in our solar system?",
+            options: ["Io", "Europa", "Ganymede", "Callisto"],
+            key: "Ganymede"
+        },
+        {
+            num: 4,
+            ques: "What is the currency of Russia?",
+            options: ["Euro", "Dollar", "Ruble", "Pound"],
+            key: "Ruble"
+        },
+    ],
+
+    quiz8: [
+        {
+            num: 1,
+            ques: "Which is the largest flower in the world?",
+            options: ["Sunflower", "Rose", "Rafflesia", "Lily"],
+            key: "Rafflesia"
+        },
+        {
+            num: 2,
+            ques: "Who discovered penicillin?",
+            options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Antonie van Leeuwenhoek"],
+            key: "Alexander Fleming"
+        },
+        {
+            num: 3,
+            ques: "Which is the longest running TV show?",
+            options: ["Friends", "The Simpsons", "Doctor Who", "SpongeBob SquarePants"],
+            key: "The Simpsons"
+        },
+        {
+            num: 4,
+            ques: "In what year did the Berlin Wall fall?",
+            options: ["1985", "1989", "1991", "1995"],
+            key: "1989"
+        },
+    ],
+
+    quiz9: [
+        {
+            num: 1,
+            ques: "Which is the largest lake in Africa?",
+            options: ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Albert"],
+            key: "Lake Victoria"
+        },
+        {
+            num: 2,
+            ques: "Who composed 'Symphony No. 9'?",
+            options: ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Pyotr Ilyich Tchaikovsky"],
+            key: "Ludwig van Beethoven"
+        },
+        {
+            num: 3,
+            ques: "Which is the hottest planet in our solar system?",
+            options: ["Venus", "Mercury", "Mars", "Jupiter"],
+            key: "Venus"
+        },
+        {
+            num: 4,
+            ques: "What is the official language of Australia?",
+            options: ["English", "Australian", "Aboriginal", "Maori"],
+            key: "English"
+        },
+    ],
+
+    quiz10: [
+        {
+            num: 1,
+            ques: "Which is the largest carnivorous dinosaur?",
+            options: ["Tyrannosaurus rex", "Spinosaurus", "Velociraptor", "Allosaurus"],
+            key: "Spinosaurus"
+        },
+        {
+            num: 2,
+            ques: "Who is known as the 'Queen of Pop'?",
+            options: ["Beyoncé", "Madonna", "Taylor Swift", "Rihanna"],
+            key: "Madonna"
+        },
+        {
+            num: 3,
+            ques: "What is the smallest prime number?",
+            options: ["1", "2", "3", "5"],
+            key: "2"
+        },
+        {
+            num: 4,
+            ques: "Which is the largest bird in the world?",
+            options: ["Ostrich", "Emu", "Kiwi", "Albatross"],
+            key: "Ostrich"
+        },
+    ],
+};
 
 let score = 0;
 let ans;
@@ -36,15 +281,19 @@ let alertShown;
 let id;
 let initialBtn;
 let innerTimeout = document.querySelector('#inner-timeout');
+let randomNum;
+let keys;
 
 function initialRender () {
     ans = '';
+    randomNum = Math.floor(Math.random() * 10);
+    keys = Object.keys(data);
     
-    content.innerHTML = `<h3 class="mb-4 font-bold text-slate-900 text-lg">${data[counter].num}. ${data[counter].ques} </h3>
+    content.innerHTML = `<h3 class="mb-4 font-bold text-slate-900 text-lg">${data[keys[`${randomNum}`]][counter].num}. ${data[keys[`${randomNum}`]][counter].ques} </h3>
     <div id="options">
         <ul class="flex flex-col">
             ${
-                data[counter].options.map((val) => {
+                data[keys[`${randomNum}`]][counter].options.map((val) => {
                     return (
                        ` <li class="text-slate-950 font-semibold border-2 border-slate-900 p-2 rounded-md hover:bg-slate-900 hover:text-white cursor-pointer font-mono text-md md:text-lg pl-4 hover:border-yellow-400 hover:border-2 check">
                         ${val}
@@ -89,11 +338,12 @@ function attachEventToBtn () {
         counter++;
         ansArr.push(ans);
         // console.log(ansArr);
-        if(counter < data.length) {
+        if(counter < data[keys[`${randomNum}`]].length) {
             clearInterval(id);
             generate();
             showBtn();
         }else {
+            console.log(counter);
             results();
         }
         
@@ -103,11 +353,11 @@ function attachEventToBtn () {
 function generate () {
    ans = '';
   
-    content.innerHTML = `<h3 class="mb-4 font-bold text-slate-900 text-lg">${data[counter].num}. ${data[counter].ques} </h3>
+    content.innerHTML = `<h3 class="mb-4 font-bold text-slate-900 text-lg">${data[keys[`${randomNum}`]][counter].num}. ${data[keys[`${randomNum}`]][counter].ques} </h3>
     <div id="options">
         <ul class="flex flex-col">
             ${
-                data[counter].options.map((val) => {
+                data[keys[`${randomNum}`]][counter].options.map((val) => {
                     return (
                        ` <li class="text-slate-950 font-semibold border-2 border-slate-900 p-2 rounded-md hover:bg-slate-900 hover:text-white cursor-pointer font-mono text-lg pl-4 hover:border-yellow-400 hover:border-2 check">
                         ${val}
@@ -164,7 +414,6 @@ window.addEventListener('DOMContentLoaded', function () {
     alertShown = true;
 
     if (askPermission()) {
-
         document.querySelector('.card').style.height = 'auto';
         initialRender();
         showBtn();
@@ -191,7 +440,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function results () {
 
-    data.forEach((obj, i) => {
+    data[keys[`${randomNum}`]].forEach((obj, i) => {
         if(obj['key'] === ansArr[i]) {
             score++;
         }
@@ -202,7 +451,7 @@ function results () {
         videoContainer.style = "height: 250px; width: 280px;"
         videoContainer.id = 'gif';
         videoContainer.innerHTML = `<div style="height: 100%; width: 100%; border: 1px solid #fff">
-            <video src="./kbc.mp4" autoplay loop muted style='height: 250px; width: 280px; object-fit: cover'></video>
+            <video src="../media/kbc.mp4" autoplay loop muted style='height: 250px; width: 280px; object-fit: cover'></video>
         </div>`;
         document.querySelector('#top').insertAdjacentElement('afterend', videoContainer);
     }else if (score === 0) {
