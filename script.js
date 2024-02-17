@@ -529,7 +529,7 @@ function timeout () {
         if (time <= 0) { 
             ansArr.push(ans);
             counter++;
-            if(counter < data.length) {
+            if(counter < data[keys[`${randomNum}`]].length) {
                 clearInterval(id);
                 generate();
                 showBtn();
